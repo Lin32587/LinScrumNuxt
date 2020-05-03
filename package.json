@@ -1,0 +1,21 @@
+{
+  "name": "newNuet",
+  "version": "1.0.0",
+  "description": "My primo Nuxt.js project",
+  "author": "Lin",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "vue-drag-n-drop": "^1.1.0"
+  },
+  "devDependencies": {
+    "@mdi/font": "^5.0.45",
+    "@nuxtjs/vuetify": "^1.11.0"
+  }
+}
