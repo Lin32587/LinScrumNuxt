@@ -1,6 +1,6 @@
 <template>
   <v-app id="sandbox">
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       v-model="primaryDrawer.model"
       :clipped="primaryDrawer.clipped"
       :floating="primaryDrawer.floating"
@@ -9,9 +9,10 @@
       :temporary="primaryDrawer.type === 'temporary'"
       app
       overflow
+      class="d-none"
     >
       <v-list>
-        <!-- <v-subheader>REPORTS</v-subheader> -->
+        <v-subheader>REPORTS</v-subheader>
         <v-list-item-group v-model="navitem" color="teal">
           <v-list-item v-for="(navitem, i) in navitems" :key="i">
             <v-list-item-icon>
@@ -23,18 +24,18 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
     <v-app-bar :clipped-left="primaryDrawer.clipped" app>
-      <v-app-bar-nav-icon
-        v-if="primaryDrawer.type !== 'permanent'"
+      <!-- <v-app-bar-nav-icon
+        v-if="primaryDrawer.type === 'permanent'"
         @click.stop="primaryDrawer.model = !primaryDrawer.model"
-      />
+      /> -->
 
       <div class="row mt-5 mx-auto pl-sm-8">
         <v-toolbar-title class="font-weight-black">LinScrum</v-toolbar-title>
 
-        <v-switch class="ml-2 pt-1 hidden-sm-and-down" v-model="primaryDrawer.mini" label="Mini" primary />
+        <!-- <v-switch class="ml-2 pt-1 hidden-sm-and-down" v-model="primaryDrawer.mini" label="Mini" primary /> -->
         <v-switch class="ml-2 pt-1" v-model="$vuetify.theme.dark" primary label="Dark" />
       </div>
 
@@ -152,16 +153,16 @@ export default {
       floating: false,
       mini: true
     },
-    navitem: 1,
-    navitems: [
-      { text: "Backlog", icon: "mdi-layers" },
-      { text: "Kanban", icon: "mdi-order-bool-descending-variant" },
-      { text: "Workflow", icon: "mdi-meteor" },
-      { text: "Question", icon: "mdi-star-box-multiple" },
-      { text: "Report", icon: "mdi-trending-up" },
+    // navitem: 1,
+    // navitems: [
+    //   { text: "Backlog", icon: "mdi-layers" },
+    //   { text: "Kanban", icon: "mdi-order-bool-descending-variant" },
+    //   { text: "Workflow", icon: "mdi-meteor" },
+    //   { text: "Question", icon: "mdi-star-box-multiple" },
+    //   { text: "Report", icon: "mdi-trending-up" },
       // { text: "客户需求", icon: "mdi-chart-bubble",to:"/demand"},
       // { text: "产品需求", icon: "mdi-firebase",to:"/demand" },
-    ],
+    // ],
     footer: {
       inset: false
     }

@@ -18,6 +18,74 @@
         />
       </template>
     </drag-drop>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
+    <div>888</div>
   </div>
 </template>
 
@@ -26,6 +94,7 @@ import DragDrop from 'vue-drag-n-drop'
 import dndComponent from '../components/dnd'
 
 export default {
+  layout:'welcomelayout',
   components: {
     DragDrop,
     dndComponent,
