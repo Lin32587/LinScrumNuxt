@@ -38,7 +38,7 @@ img{
 p.logotitle{
   margin-top: 2rem;
   display: block;
-  font-size: 500%;
+  font-size: 450%;
   font-style: oblique;
   color: teal;
   font-weight:bold;
@@ -51,5 +51,17 @@ p.logotitle{
   letter-spacing: 10px;
   white-space:nowrap;
   text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  img{
+    height: 180px;
+  }
+  p.logotitle{
+    font-size: 280%;
+  }
+  .subtitle{
+    letter-spacing: 8px;
+  }
 }
 </style>
