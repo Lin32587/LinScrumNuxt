@@ -24,13 +24,13 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-    </v-navigation-drawer> -->
+    </v-navigation-drawer>-->
 
-    <v-app-bar :clipped-left="primaryDrawer.clipped" app>
+    <v-app-bar :clipped-left="primaryDrawer.clipped" :elevation="2" light="true" app>
       <!-- <v-app-bar-nav-icon
         v-if="primaryDrawer.type === 'permanent'"
         @click.stop="primaryDrawer.model = !primaryDrawer.model"
-      /> -->
+      />-->
 
       <div class="row mt-5 mx-auto pl-sm-8">
         <v-toolbar-title class="font-weight-black">LinScrum</v-toolbar-title>
@@ -42,8 +42,8 @@
       <div class="hidden-sm-and-down text-center">
         <!-- <v-btn flat to="/" exact>Home</v-btn>
         <v-btn flat to="/dndcase" exact>DndCase</v-btn>
-        <v-btn flat to="/contact" exact>Contact</v-btn> -->
-        <v-btn  color="primary" class="font-weight-regular" dark>登录</v-btn>
+        <v-btn flat to="/contact" exact>Contact</v-btn>-->
+        <v-btn color="primary" class="font-weight-regular" dark>登录</v-btn>
         <v-btn text color="teal" class="font-weight-regular" dark>注册</v-btn>
       </div>
     </v-app-bar>
@@ -135,9 +135,9 @@
       </v-container>
     </v-content>-->
 
-    <v-footer :inset="footer.inset" app>
-      <span>Lin</span>
-      <span class="px-4">&copy; {{ new Date().getFullYear() }}</span>
+    <v-footer :inset="footer.inset" app class="d-none d-sm-flex">
+      <span class="px-4">Copyright© 2019-{{ new Date().getFullYear() }}</span>
+      <span>Lin3258714569@gmail.com</span>
     </v-footer>
   </v-app>
 </template>
@@ -160,8 +160,8 @@ export default {
     //   { text: "Workflow", icon: "mdi-meteor" },
     //   { text: "Question", icon: "mdi-star-box-multiple" },
     //   { text: "Report", icon: "mdi-trending-up" },
-      // { text: "客户需求", icon: "mdi-chart-bubble",to:"/demand"},
-      // { text: "产品需求", icon: "mdi-firebase",to:"/demand" },
+    // { text: "客户需求", icon: "mdi-chart-bubble",to:"/demand"},
+    // { text: "产品需求", icon: "mdi-firebase",to:"/demand" },
     // ],
     footer: {
       inset: false
