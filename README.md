@@ -1,6 +1,6 @@
-# newNuet
+# LinScrum
 
-> My primo Nuxt.js project
+> A Simple program management 毕业设计
 
 ## Build Setup
 
