@@ -39,12 +39,12 @@
         <v-switch class="ml-2 pt-1" v-model="$vuetify.theme.dark" primary label="Dark" />
       </div>
 
-      <div class="hidden-sm-and-down text-center">
+      <div class="hidden-xs-and-down text-center">
         <!-- <v-btn flat to="/" exact>Home</v-btn>
         <v-btn flat to="/dndcase" exact>DndCase</v-btn>
         <v-btn flat to="/contact" exact>Contact</v-btn>-->
-        <v-btn color="primary" class="font-weight-regular" dark>登录</v-btn>
-        <v-btn text color="teal" class="font-weight-regular" dark>注册</v-btn>
+        <Login />
+        <Signup />
       </div>
     </v-app-bar>
 
@@ -137,13 +137,21 @@
 
     <v-footer :inset="footer.inset" app class="d-none d-sm-flex">
       <span class="px-4">Copyright© 2019-{{ new Date().getFullYear() }}</span>
-      <span>Lin3258714569@gmail.com</span>
+      <span>Junbin Lin 2016131602 Lin3258714569@gmail.com</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import Login from '../components/Login'
+import Signup from '../components/Signup'
+
 export default {
+  components:{
+    Login,
+    Signup,
+  },
+
   data: () => ({
     drawers: ["Default (no property)", "Permanent", "Temporary"],
     primaryDrawer: {
