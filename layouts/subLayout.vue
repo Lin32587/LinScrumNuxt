@@ -13,12 +13,18 @@
       <v-list>
         <!-- <v-subheader>REPORTS</v-subheader> -->
         <v-list-item-group v-model="navitem" color="teal">
-          <v-list-item v-for="(navitem, i) in navitems" :key="i">
+          <v-list-item
+            v-for="(navitem, i) in navitems"
+            :key="i"
+            :to="navitem.to"
+            flat
+            style="text-decoration:none"
+          >
             <v-list-item-icon>
               <v-icon v-text="navitem.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title v-text="navitem.text" v-link="navitem.to"></v-list-item-title>
+              <v-list-item-title v-text="navitem.text"></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -49,6 +55,7 @@
         <v-btn flat to="/contact" exact>Contact</v-btn>-->
         <!-- <v-btn color="primary" class="font-weight-regular" dark>登录</v-btn>
         <v-btn text color="teal" class="font-weight-regular" dark>注册</v-btn>-->
+        <v-btn text color="grey" class="font-weight-regular" to="/" dark>注销</v-btn>
       </div>
     </v-app-bar>
 
@@ -159,13 +166,13 @@ export default {
     },
     navitem: 1,
     navitems: [
-      { text: "Backlog", icon: "mdi-layers" },
-      { text: "Kanban", icon: "mdi-order-bool-descending-variant" },
-      { text: "Workflow", icon: "mdi-meteor" },
-      { text: "Question", icon: "mdi-star-box-multiple" },
-      { text: "Report", icon: "mdi-trending-up" }
-      // { text: "客户需求", icon: "mdi-chart-bubble",to:"/demand"},
-      // { text: "产品需求", icon: "mdi-firebase",to:"/demand" },
+      // { text: "Backlog", icon: "mdi-layers" },
+      // { text: "Kanban", icon: "mdi-order-bool-descending-variant" },
+      // { text: "Workflow", icon: "mdi-meteor" },
+      // { text: "Question", icon: "mdi-star-box-multiple" },
+      // { text: "Report", icon: "mdi-trending-up" }
+      { text: "客户需求", icon: "mdi-chart-bubble", to: "/subSystem/clientNeed" },
+      { text: "产品需求", icon: "mdi-firebase", to: "/demand" }
     ],
     footer: {
       inset: false

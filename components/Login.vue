@@ -15,20 +15,32 @@
         <v-container>
           <v-row>
             <v-col cols="12">
-              <v-text-field label="用户名或邮箱" required ></v-text-field>
-              <!-- <small class="red--text">未找到已注册邮箱</small> -->
+              <v-text-field
+                label="用户名或邮箱"
+                ref="nameemail"
+                v-model="nameemail"
+                :rules="[()=>!!nameemail||'请输入用户名或邮箱']"
+                :error-messages="errorMessages"
+                required
+              ></v-text-field>
             </v-col>
             <v-col cols="12">
-              <v-text-field label="用户密码" type="password" required ></v-text-field>
-              <!-- <small class="red--text">密码错误</small> -->
+              <v-text-field
+                label="用户密码"
+                type="password"
+                ref="passwd"
+                v-model="passwd"
+                :rules="[()=>!!passwd||'请输入用户密码']"
+                required
+              ></v-text-field>
             </v-col>
           </v-row>
         </v-container>
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="primary" @click="dialog = false">确定</v-btn>
-        <v-btn color="blue darken-1" text @click="dialog = false">取消</v-btn>
+        <v-btn color="primary" @click="submit">确定</v-btn>
+        <v-btn color="blue darken-1" text @click="resetForm">取消</v-btn>
         <v-spacer></v-spacer>
       </v-card-actions>
     </v-card>
@@ -38,8 +50,54 @@
 <script>
 export default {
   data: () => ({
-    dialog: false
-  })
+    dialog: false,
+    errorMessages: "",
+    nameemail: null,
+    passwd: null,
+    formHasErrors: false
+  }),
+
+  computed: {
+    form() {
+      return {
+        nameemail: this.nameemail,
+        passwd: this.passwd
+      };
+    }
+  },
+
+  watch: {
+    nameemail() {
+      this.errorMessages = "";
+    }
+  },
+
+  methods: {
+    resetForm() {
+      this.errorMessages = [];
+      this.formHasErrors = false;
+
+      Object.keys(this.form).forEach(f => {
+        this.$refs[f].reset();
+      });
+
+      this.dialog = false;
+    },
+    submit() {
+      this.formHasErrors = false;
+      if (this.nameemail == "Lin") {
+        window.location.href = "/subSystem/clientNeed"
+      }
+      Object.keys(this.form).forEach(f => {
+        if (!this.form[f]) this.formHasErrors = true;
+        else {
+          this.dialog = false;
+          this.$refs[f].reset();
+        }
+        this.$refs[f].validate(true);
+      });
+    }
+  }
 };
 </script>
 

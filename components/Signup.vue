@@ -46,7 +46,14 @@
               ></v-text-field>
             </v-col>
             <v-col cols="12">
-              <v-text-field label="重输密码" type="password" required></v-text-field>
+              <v-text-field
+                label="重输密码"
+                ref="repasswd"
+                v-model="repasswd"
+                :rules="[()=>!!repasswd||'请您再次输入密码']"
+                type="password"
+                required
+              ></v-text-field>
             </v-col>
             <v-col cols="12">
               <v-autocomplete
@@ -63,8 +70,8 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="primary" @click="dialog = false">确定</v-btn>
-        <v-btn color="blue darken-1" text @click="dialog = false">取消</v-btn>
+        <v-btn color="primary" @click="submit">确定</v-btn>
+        <v-btn color="blue darken-1" text @click="resetForm">取消</v-btn>
         <v-spacer></v-spacer>
       </v-card-actions>
     </v-card>
@@ -76,8 +83,58 @@ export default {
   data: () => ({
     dialog: false,
     types: ["客户", "项目经理", "开发团队成员", "测试团队成员", "项目负责人"],
-    type: null
-  })
+    type: null,
+    name: null,
+    email: null,
+    passwd: null,
+    repasswd: null,
+    formHasErrors: false,
+    errorMessages: ""
+  }),
+
+  computed: {
+    form() {
+      return {
+        type: this.type,
+        name: this.name,
+        email: this.email,
+        passwd: this.passwd,
+        repasswd: this.repasswd
+      };
+    }
+  },
+
+  watch: {
+    name() {
+      this.errorMessages = "";
+    }
+  },
+
+  methods: {
+    resetForm() {
+      this.errorMessages = [];
+      this.formHasErrors = false;
+
+      Object.keys(this.form).forEach(f => {
+        this.$refs[f].reset();
+      });
+      this.dialog = false;
+    },
+    submit() {
+      this.formHasErrors = false;
+
+      Object.keys(this.form).forEach(f => {
+        if (!this.form[f]) {
+          this.formHasErrors = true;
+        } else {
+          this.dialog = false;
+          this.$refs[f].reset();
+          window.location.href = "/";
+        }
+        this.$refs[f].validate(true);
+      });
+    }
+  }
 };
 </script>
 
