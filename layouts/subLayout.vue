@@ -49,7 +49,7 @@
         <v-switch class="ml-2 pt-1" v-model="$vuetify.theme.dark" primary label="Dark" />
       </div>
 
-      <div class="hidden-sm-and-down text-center">
+      <div class="text-center">
         <!-- <v-btn flat to="/" exact>Home</v-btn>
         <v-btn flat to="/dndcase" exact>DndCase</v-btn>
         <v-btn flat to="/contact" exact>Contact</v-btn>-->
@@ -172,7 +172,7 @@ export default {
       // { text: "Question", icon: "mdi-star-box-multiple" },
       // { text: "Report", icon: "mdi-trending-up" }
       { text: "客户需求", icon: "mdi-chart-bubble", to: "/subSystem/clientNeed" },
-      { text: "产品需求", icon: "mdi-firebase", to: "/demand" }
+      { text: "产品需求", icon: "mdi-firebase", to: "/subSystem/productNeed" }
     ],
     footer: {
       inset: false

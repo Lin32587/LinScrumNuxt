@@ -86,7 +86,11 @@ export default {
     submit() {
       this.formHasErrors = false;
       if (this.nameemail == "Lin") {
-        window.location.href = "/subSystem/clientNeed"
+        window.location.href = "/subSystem/clientNeed";
+      } else if (this.nameemail == "PM") {
+        window.location.href = "/subSystem/productNeed";
+      } else if (this.nameemail == "team") {
+        window.location.href = "/mainSystem/Backlog";
       }
       Object.keys(this.form).forEach(f => {
         if (!this.form[f]) this.formHasErrors = true;
