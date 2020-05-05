@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "vue-drag-n-drop": "^1.1.0"
+    "vue-drag-n-drop": "^1.1.0",
+    "vuedraggable": "^2.23.2"
   },
   "devDependencies": {
     "@mdi/font": "^5.0.45",

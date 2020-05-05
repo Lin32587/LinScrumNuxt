@@ -79,7 +79,7 @@ export default {
     probType: "故事",
     probTypeItem: ["故事", "任务", "缺陷"],
     probPriority: "Medium",
-    probPriorityItem: ["Highes", "High", "Medium", "Low", "Lowest"],
+    probPriorityItem: ["高", "中", "低"],
     probDone: null,
     probDoneItem: ["林浚镔", "张三", "李四", "王五", "赵六"],
     probDesc: null,

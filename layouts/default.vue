@@ -165,10 +165,10 @@ export default {
     },
     navitem: 1,
     navitems: [
-      { text: "Backlog", icon: "mdi-layers" },
-      { text: "Kanban", icon: "mdi-order-bool-descending-variant" },
-      { text: "Workflow", icon: "mdi-meteor" },
-      { text: "Question", icon: "mdi-star-box-multiple" }
+      { text: "Backlog需求池", icon: "mdi-layers",to:"/mainSystem/Backlog"},
+      { text: "Kanban看板", icon: "mdi-order-bool-descending-variant",to:"/mainSystem/Kanban"},
+      { text: "Sprint冲刺", icon: "mdi-meteor" },
+      { text: "Tesk问题清单", icon: "mdi-star-box-multiple" }
       // { text: "Report", icon: "mdi-trending-up" }
       // { text: "客户需求", icon: "mdi-chart-bubble",to:"/demand"},
       // { text: "产品需求", icon: "mdi-firebase",to:"/demand" },
