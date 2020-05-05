@@ -55,6 +55,7 @@
         <v-btn flat to="/contact" exact>Contact</v-btn>-->
         <!-- <v-btn color="primary" class="font-weight-regular" dark>登录</v-btn>
         <v-btn text color="teal" class="font-weight-regular" dark>注册</v-btn>-->
+        <v-btn text color="grey" class="font-weight-regular" to="/" dark>注销</v-btn>
       </div>
     </v-app-bar>
 
@@ -167,8 +168,8 @@ export default {
     navitems: [
       { text: "Backlog需求池", icon: "mdi-layers",to:"/mainSystem/Backlog"},
       { text: "Kanban看板", icon: "mdi-order-bool-descending-variant",to:"/mainSystem/Kanban"},
-      { text: "Sprint冲刺", icon: "mdi-meteor" },
-      { text: "Tesk问题清单", icon: "mdi-star-box-multiple" }
+      { text: "Sprint冲刺", icon: "mdi-meteor",to:"/mainSystem/Sprint" },
+      { text: "Tesk问题清单", icon: "mdi-star-box-multiple",to:"/mainSystem/TeskList" }
       // { text: "Report", icon: "mdi-trending-up" }
       // { text: "客户需求", icon: "mdi-chart-bubble",to:"/demand"},
       // { text: "产品需求", icon: "mdi-firebase",to:"/demand" },
